@@ -1,0 +1,18 @@
+events = [
+		{
+	  "title": "Nature in Winter",
+	  "author": "Razi Taraji",
+	  "publication_date": "October 30, 2024",
+	  "date": "Tuesday, November 26 · 6:30 – 7:30pm EST",
+	  "location": "8728 Buffalo Avenue, Niagara Falls, NY 14304, United States",
+	  "description": "Come to The Niagara Falls Public Library LaSalle Branch and learn about how animals in Western NY adapt and respond to the changing environment and cooler temperatures. Which animals hibernate? What happens to reptiles, amphibians, and insects? How do birds find food? This talk will be given by a naturalist from Niagara Falls State Park and is sponsored by The Niagara Falls Public Library. Free parking in the back of the library."
+	  },
+	{
+	  "title": "The Winter Show at The Wurlitzer",
+	  "author": "Jacob Shi",
+	  "publication_date": "October 10, 2024",
+	  "date": "Saturday, January 18, 2025 · 10am – 5pm EST",
+	  "location": "908 Niagara Falls Boulevard, North Tonawanda, NY 14120, United States",
+	  "description": "Get ready for a slithery and scaly extravaganza at the The Winter Show at The Wurlitzer brought to you by WNY Reptiles! Join us for a day filled with fascinating reptiles, educational exhibits, and interactive experiences. Whether you’re a seasoned reptile enthusiast, oddities collector, plant aficionado, or just curious about these amazing creatures, this event is perfect for all ages. Come meet a variety of reptiles up close, learn about their habitats, and even have the chance to handle some of them! Check out our carnivorous plant displays, maybe even take one home! Do you like the unusual? Visit our oddities vendors for preserved specimens, taxidermy, mounts and more! Don’t miss out on this unique opportunity to appreciate the beauty and diversity of reptiles while exploring the historic Wurlitzer building. Mark your calendars and join us for a day of fun and learning at the The Winter Show at The Wurlitzer!"
+	}
+]

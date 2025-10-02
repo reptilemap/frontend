@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src="blogs.json"></script>
+
+    <style>
+        body {
+            background-color: #f1f8e9; /* Light green background */
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .navcontainer {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="home" class="light-green darken-4 z-depth-2">
+        <div class="nav-wrapper navcontainer">
+                            <a href="index.html" class="brand-logo">Reptilemap</a>
+                            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                            <ul class="right hide-on-med-and-down">
+                                <li><a href="index.html">Home</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <ul class="sidenav" id="mobile-demo">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                    </ul>
+
+    <div class="container">
+        <div id="blog-content">
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="mypages">
+        </div>
+    </div>
+
+    <footer class="page-footer light-green darken-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <h5 class="white-text">The Reptile Map</h5>
+                                <p class="grey-text text-lighten-4">A global initiative for reptile conservation.</p>
+                            </div>
+                            <div class="col l4 offset-l2 s12">
+                                <h5 class="white-text">Links</h5>
+                                <ul>
+                                    <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                                    <li><a class="grey-text text-lighten-3" href="index.html#map-section">Map</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright light-green darken-3">
+                        <div class="container">
+                            © 2025 The Reptile Map. All rights reserved.
+                        </div>
+                    </div>
+                </footer>
+
+    <script>
+
+        M.Sidenav.init(document.querySelector('.sidenav'));
+
+        mypages = document.getElementById("mypages");
+        myhtml = "<ul class='pagination center-align'>";
+        for (i=0; i<stories.length;i++) {
+            myhtml = myhtml + "<li><a href='stories.html?story=" + i + "'>" + i + "</a><li>";   
+        }
+        myhtml = myhtml + "</ul>";
+        mypages.innerHTML = myhtml;
+
+            const params = new URLSearchParams(window.location.search);
+            const index = params.get('story');
+
+            if (index > stories.length) {
+                data = stories[0];
+            } else {
+                data = stories[index]; 
+            }
+            
+            const blogContainer = document.getElementById('blog-content');
+
+            // Create and append the title
+            const title = document.createElement('h1');
+            title.classList.add('center-align', 'green-text', 'text-darken-4');
+            title.textContent = data.title;
+            blogContainer.appendChild(title);
+
+            // Create and append the author and date
+            const meta = document.createElement('p');
+            meta.classList.add('center-align', 'grey-text');
+            meta.innerHTML = `By: ${data.author} | Published: ${data.date}`;
+            blogContainer.appendChild(meta);
+
+            // Loop through sections and create content
+            data.sections.forEach(section => {
+                // Create section heading
+                const heading = document.createElement('h3');
+                heading.classList.add('green-text', 'text-darken-3');
+                heading.textContent = section.heading;
+                blogContainer.appendChild(heading);
+
+                // Create and append image if it exists
+                if (section.image != null) {
+                        imageWrapper = document.createElement('div');
+                        imageWrapper.classList.add('center-align', 'section');
+                        curimage = document.createElement('img');
+                        curimage.src = section.image.source;
+                        caption = document.createElement('p');
+                        caption.textContent = section.image.caption;
+                        imageWrapper.appendChild(curimage);
+                        imageWrapper.appendChild(caption);
+                        blogContainer.appendChild(imageWrapper);
+                }
+
+                // Create and append section content
+                if (section.hasOwnProperty('content')) {
+                    const content = document.createElement('p');
+                    content.innerHTML = section.content;
+                    blogContainer.appendChild(content);
+                } 
+            });
+        
+    </script>
+</body>
+</html>

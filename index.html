@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reptile Map - Vanilla JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <script src="events.json"></script>
+    <script src="blogs.json"></script>
+
+    <style>
+        #map { height: 450px; }
+        body { background-color: #f8f8f8; }
+        .hero-bg { background: linear-gradient(to right, #4CAF50, #8BC34A); }
+    </style>
+</head>
+<body>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#map-section">Map</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <header>
+        <nav id="home" class="light-green darken-4 z-depth-2">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo">Reptilemap.world</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#map-section">Map</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-bg white-text section no-pad-bot">
+            <div class="container center-align">
+                <br><br>
+                <h1 class="header light-green-text text-lighten-5">Mapping the World's Reptiles</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">A global initiative to understand reptile biogeography, monitor populations, and inform conservation strategies.</h5>
+                </div>
+                <div class="row center">
+                    <a href="#map-section" class="btn-large waves-effect waves-light white light-green-text text-darken-4">View Map</a>
+                </div>
+                <br><br>
+            </div>
+        </section>
+
+        <section id="conference" class="section scrollspy">
+            <div class="container center-align">
+                <h2 class="light-green-text text-darken-4">ReptileWorld 2025</h2>
+                <h4 class="light-gray-text">October 26 @1pm on zoom</h4>
+                <p class="flow-text">
+                    Join us for a day of ...
+                </p>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <div class="card small light-green lighten-5">
+                            <div class="card-content light-green-text text-darken-4">
+                                <h4 class="card-title">Keynote address</h4>
+                                <p>Importance of conservation, citizen science and empowering students with AI vibe coding.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card small light-green lighten-5">
+                            <div class="card-content light-green-text text-darken-4">
+                                <h4 class="card-title">Panel discussions</h4>
+                                <p>blah blah.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card small light-green lighten-5">
+                            <div class="card-content light-green-text text-darken-4">
+                                <h4 class="card-title">Q&A</h4>
+                                <p>blah blah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section scrollspy grey lighten-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h2 class="light-green-text text-darken-4">About Us</h2>
+                        <p class="flow-text">
+                            The Reptile Map is dedicated to creating a comprehensive, interactive, and accessible global mapping platform that documents the distribution and diversity of reptile species around the world. We aim to establish a global network of citizen scientists and researchers to gather crucial data.
+                        </p>
+                        <p class="flow-text">
+                            Our mission is to be a valuable resource for understanding reptile biogeography, monitoring population trends, identifying conservation hotspots, and informing strategies for the protection and management of reptiles and their habitats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-section" class="section scrollspy">
+            <div class="container">
+                <h2 class="light-green-text text-darken-4 center">Reptilemap</h2>
+                <div class="card z-depth-2">
+                    <div class="card-content">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="obs" class="section scrollspy">
+            <div class="container">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title light-green-text text-darken-4">Submit Observation</span>
+                        <form id="observationForm">
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input id="latitude" type="number" step="any" required>
+                                    <label for="latitude">Latitude</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="longitude" type="number" step="any" required>
+                                    <label for="longitude">Longitude</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="species" type="text" required>
+                                    <label for="species">Species</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="link" type="url">
+                                    <label for="link">Link (URL)</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="image" type="url">
+                                    <label for="image">Image (URL)</label>
+                                </div>
+                            </div>
+                            <div class="row center">
+                                <button type="submit" class="btn waves-effect waves-light light-green darken-4">
+                                    Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                            <p class="center-align" id="statusMessage"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-section" class="section scrollspy grey lighten-3">
+            <div class="container center-align">
+                <h2 class="light-green-text text-darken-4">Our Projects</h2>
+                <p class="flow-text">
+                    We are involved in various projects aimed at reptile research, habitat restoration, and community engagement. From tracking endangered species to educating local communities, our work spans the globe.
+                </p>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <div class="card small light-green lighten-5">
+                            <div class="card-content light-green-text text-darken-4">
+                                <h4 class="card-title">Species Monitoring</h4>
+                                <p>Implementing advanced tracking and monitoring programs for vulnerable reptile populations across diverse ecosystems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card small light-green lighten-5">
+                            <div class="card-content light-green-text text-darken-4">
+                                <h4 class="card-title">Habitat Restoration</h4>
+                                <p>Working to restore critical reptile habitats, ensuring safe and thriving environments for various species.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card small light-green lighten-5">
+                            <div class="card-content light-green-text text-darken-4">
+                                <h4 class="card-title">Citizen Science</h4>
+                                <p>Engaging the public in data collection efforts, transforming everyday citizens into vital contributors to conservation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories" class="section scrollspy">
+            <div class="container center-align">
+                <h2 class="light-green-text text-darken-4">Stories</h2>
+                <div class="row" id="stories-container">
+                    </div>
+            </div>
+        </section>
+
+        <section id="events" class="section scrollspy grey lighten-3">
+            <div class="container center-align">
+                <h2 class="light-green-text text-darken-4">Events</h2>
+                <p class="flow-text">
+                    Join us for our upcoming workshops, webinars, and field trips designed to educate and engage reptile enthusiasts and conservationists.
+                </p>
+                <div class="row" id="events-container">
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section scrollspy">
+ 
+            <div class="container center-align">
+                <h2 class="light-green-text text-darken-4">Contact us</h2>
+                <p class="flow-text">
+                    Drop us a line. Tell us who you are and ask a question, leave a suggestion or ask us how to get involved in reptile conservation in your area.
+                </p>
+                
+                <div class="center-align" style='margin-bottom: 30px;'> 
+                    <div style='display: flex; align-items: center; gap: 8px; justify-content: center;'>
+                        <i class="material-icons medium light-green-text text-darken-4">email</i>
+                        <span style='font-size: 25px;' class="light-green-text text-darken-4">reptilemap@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+
+        </section>
+
+    </main>
+
+    <footer class="page-footer light-green darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">The Reptile Map</h5>
+                    <p class="grey-text text-lighten-4">A global initiative for reptile conservation.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#home">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#map-section">Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright light-green darken-3">
+            <div class="container">
+                © 2025 The Reptile Map. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script>
+        
+        // The observation list will be managed dynamically
+        let observations = [];
+        let mapInstance = null;
+        let markers = [];
+        let clickedCoords = null; // Global variable to hold clicked map coordinates
+        const OBS_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAI3iRgPCDrYWFgOV_8rbswRvu2W4pYg29OS4jIRvpDxX0kA2sLyPSVTC83whLf3JfArhKIr87jEK6/pub?gid=0&single=true&output=csv';
+        const SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbxI8w2hYv41EsB2XC8jnE5qDp8APzYFzBgfoG6yZviA307C8w2VwG37i7bBCYRDIN0/exec';
+
+        // Helper function to update map markers
+        function updateMapMarkers(obs) {
+            if (!mapInstance) return;
+
+            // Remove existing markers
+            markers.forEach(marker => mapInstance.removeLayer(marker));
+            markers = [];
+
+            // Add new markers
+            obs.forEach(observation => {
+                const { lat, lon, species } = observation;
+                if (lat && lon) {
+                    const marker = L.marker([lat, lon]).addTo(mapInstance);
+                    marker.bindPopup(`<h3>${species}</h3>`).openPopup();
+                    markers.push(marker);
+                }
+            });
+
+            // Fit bounds to markers
+            if (markers.length > 0) {
+                const group = new L.featureGroup(markers);
+                mapInstance.fitBounds(group.getBounds());
+            }
+        }
+
+        // Fetch observations and initialize the map
+        async function fetchObservations() {
+            try {
+                const response = await fetch(OBS_SHEET_URL);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const csvText = await response.text();
+                const lines = csvText.trim().split('\n').slice(1);
+                
+                observations = lines.map(line => {
+                    const [lat, lon, species, link, image] = line.split(',').map(d => d.trim());
+                    return { lat: parseFloat(lat), lon: parseFloat(lon), species, link, image };
+                });
+
+                updateMapMarkers(observations);
+
+            } catch (error) {
+                console.error("Failed to fetch observations:", error);
+            }
+        }
+
+        // Initialize Map
+        function initMap() {
+            mapInstance = L.map('map').setView([0, 0], 2);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(mapInstance);
+
+            // Handle map click for setting coordinates in form
+            mapInstance.on('click', (e) => {
+                clickedCoords = { lat: e.latlng.lat, lng: e.latlng.lng };
+
+                // Update the form fields manually
+                document.getElementById('latitude').value = clickedCoords.lat.toFixed(4);
+                document.getElementById('longitude').value = clickedCoords.lng.toFixed(4);
+                M.updateTextFields(); // Required for Materialize to update input fields
+
+                L.popup()
+                    .setLatLng(e.latlng)
+                    .setContent("Clicked at: " + e.latlng.toString())
+                    .openOn(mapInstance);
+            });
+
+            fetchObservations(); // Load initial data
+        }
+
+        // Observation Form Submission
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('observationForm');
+            const statusEl = document.getElementById('statusMessage');
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = {
+                    latitude: document.getElementById('latitude').value,
+                    longitude: document.getElementById('longitude').value,
+                    species: document.getElementById('species').value,
+                    link: document.getElementById('link').value,
+                    image: document.getElementById('image').value
+                };
+
+                statusEl.textContent = 'Submitting data...';
+                statusEl.className = 'grey-text';
+
+                try {
+                    const response = await fetch(SUBMIT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Update local observations and map
+                    observations.push({
+                        lat: parseFloat(formData.latitude),
+                        lon: parseFloat(formData.longitude),
+                        species: formData.species,
+                        link: formData.link,
+                        image: formData.image
+                    });
+                    updateMapMarkers(observations);
+
+                    statusEl.textContent = 'Data successfully submitted!';
+                    statusEl.className = 'green-text';
+
+                    // Reset form
+                    form.reset();
+                    M.updateTextFields();
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    statusEl.textContent = 'Error submitting data. Please try again.';
+                    statusEl.className = 'red-text';
+                }
+            });
+
+        });
+
+
+        // Vanilla JS for rendering static data (Events and Stories)
+        function renderContent() {
+            // Render Events
+            const eventsContainer = document.getElementById('events-container');
+
+            events.forEach(event => {
+                const eventHtml = `
+                    <div class="col s12 m6">
+                        <div class="card large light-green lighten-5">
+                            <div class="card-content black-text left-align">
+                                <span class="card-title light-green-text text-darken-4">${event.title}</span>
+                                <p><strong>Date:</strong> ${event.date}</p>
+                                <p><strong>Location:</strong> ${event.location}</p>
+                                <p>${event.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                eventsContainer.insertAdjacentHTML('beforeend', eventHtml);
+            });
+
+            // Render Stories (first 3 only, as per original Vue code)
+            const storiesContainer = document.getElementById('stories-container');
+            stories.slice(0, 3).forEach((story, index) => {
+                const storyHtml = `
+                    <div class="col s12 m6 l4">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="${story.thumbnail}">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator light-green-text text-darken-4">${story.title}</span>
+                                <p><a href="stories.html?story=${index}">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                storiesContainer.insertAdjacentHTML('beforeend', storyHtml);
+            });
+        }
+
+
+        // Initialization on DOM Load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Materialize Components (Sidenav, Scrollspy, etc.)
+            M.AutoInit(); 
+
+            // Initialize the Map and fetch data
+            initMap();
+
+            // Render static data
+            renderContent();
+        });
+
+    </script>
+
+</body>
+</html>
