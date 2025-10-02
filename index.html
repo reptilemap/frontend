@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Reptile Map - Vanilla JS</title>
+    <title>Reptilemap.world</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -93,6 +93,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section scrollspy">
+            <div class = "col s12 m6">
+                <div class="video-container">
+                    <iframe width="80%" src="https://www.youtube.com/embed/Tix77RdPMxk?si=IPUgBqzYJ9H_ctk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -293,10 +301,10 @@
 
             // Add new markers
             obs.forEach(observation => {
-                const { lat, lon, species } = observation;
+                const { lat, lon, species, image } = observation;
                 if (lat && lon) {
                     const marker = L.marker([lat, lon]).addTo(mapInstance);
-                    marker.bindPopup(`<h3>${species}</h3>`).openPopup();
+                    marker.bindPopup(`<h5>${species}</h5><br><img src=${image} width='100%' />`).openPopup();
                     markers.push(marker);
                 }
             });
