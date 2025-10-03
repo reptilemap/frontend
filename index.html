@@ -217,9 +217,9 @@
         <section id="stories" class="section scrollspy">
             <div class="container center-align">
                 <h2 class="light-green-text text-darken-4">Stories</h2>
-                <div class="row" id="stories-container">
-                    </div>
+                <div class="row" id="stories-container"></div>
             </div>
+            <div id='pages'></div>
         </section>
 
         <section id="events" class="section scrollspy grey lighten-3">
@@ -456,6 +456,16 @@
                 `;
                 storiesContainer.insertAdjacentHTML('beforeend', storyHtml);
             });
+
+            var pages = document.getElementById('pages');
+            var myhtml = "<div class='row center'><ul class='pagination'>"
+            stories.forEach((story, index) => {
+                myhtml = myhtml + "<li><a href='stories.html?story=" + index + "'>" + index + "</a></li>"
+            });
+            myhtml = myhtml + "</ul></div>"
+            console.log(myhtml);
+            pages.innerHTML = myhtml;
+
         }
 
 
