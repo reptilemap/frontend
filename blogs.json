@@ -24,7 +24,7 @@ stories = [
         "heading": "Rising Temperatures and Reproduction",
         "content": "<p>Florida's warming climate has profound effects on reptile reproduction, especially for species like sea turtles, whose egg incubation temperature determines hatchlings' sex. Warmer sands are producing more female hatchlings, which can disrupt population balance and affect future generations.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/sea-turtle-hatchling-nest.jpg",
+          "source": "photos/turtle.jpg",
           "caption": "Warmer sands are causing a significant bias toward female sea turtle hatchlings."
         }
       },
@@ -81,7 +81,7 @@ stories = [
         "heading": "1. The Eastern Massasauga Rattlesnake",
         "content": "<h3>Scientific Name: <em>Sistrurus catenatus</em></h3><p>The Eastern Massasauga Rattlesnake is Ontario's **only venomous snake** and is considered a species at risk. Found primarily in the Georgian Bay area, this shy and reclusive snake prefers wetlands, prairies, and forests. Despite its fearsome reputation, it is not aggressive and will typically avoid human contact.</p><strong>Conservation Status:</strong> Threatened<br><strong>Fun Fact:</strong> The Massasauga's rattle, made of keratin, produces its famous warning sound when vibrated.",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/massasauga-rattlesnake.jpg",
+          "source": "photos/massasauga.jpg",
           "caption": "The Eastern Massasauga Rattlesnake is a threatened species, primarily found in the Georgian Bay area."
         }
       },
@@ -89,7 +89,7 @@ stories = [
         "heading": "2. The Painted Turtle",
         "content": "<h3>Scientific Name: <em>Chrysemys picta</em></h3><p>The Painted Turtle is the **most widespread native turtle** in Ontario, easily recognized by its smooth, olive-colored shell and brightly colored markings. These turtles are often seen basking on logs in ponds, marshes, and slow-moving rivers throughout the province.</p><strong>Conservation Status:</strong> Special Concern<br><strong>Fun Fact:</strong> Painted Turtles can survive in frozen ponds by slowing their metabolism and absorbing oxygen through their skin.",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/ontario-painted-turtle.jpg",
+          "source": "photos/paintedturtle.png",
           "caption": "Painted Turtles are a common sight, often basking on logs in slow-moving water bodies."
         }
       },
@@ -97,7 +97,7 @@ stories = [
         "heading": "3. The Five-lined Skink",
         "content": "<h3>Scientific Name: <em>Plestiodon fasciatus</em></h3><p>The **Five-lined Skink is Ontario's only native lizard**, found in the warm, rocky areas of the province, particularly in the southern regions and along the shores of Lake Erie. Juveniles are easily identified by their bright blue tails, which fade with age.</p><strong>Conservation Status:</strong> Special Concern<br><strong>Fun Fact:</strong> When threatened, the skink can detach its tail to distract predators while it escapes.",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/five-lined-skink.jpg",
+          "source": "photos/fivelinedskink.jpg",
           "caption": "Juvenile Five-lined Skinks are known for their distinctive bright blue tails."
         }
       },
@@ -105,7 +105,7 @@ stories = [
         "heading": "4. The Northern Watersnake",
         "content": "<h3>Scientific Name: <em>Nerodia sipedon</em></h3><p>The Northern Watersnake is commonly found near lakes, rivers, and marshes throughout Ontario. Although often mistaken for the venomous Massasauga due to its aggressive behavior when threatened, the watersnake is **non-venomous** and poses no harm to humans.</p><strong>Conservation Status:</strong> Least Concern<br><strong>Fun Fact:</strong> Northern Watersnakes are excellent swimmers and can often be seen hunting for fish and amphibians in the water.",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/northern-watersnake.jpg",
+          "source": "photos/watersnake.jpg",
           "caption": "The non-venomous Northern Watersnake is an aggressive-looking but harmless aquatic species."
         }
       },
@@ -113,7 +113,7 @@ stories = [
         "heading": "5. The Blanding's Turtle",
         "content": "<h3>Scientific Name: <em>Emydoidea blandingii</em></h3><p>Blanding's Turtles are easily recognized by their high-domed shell and **bright yellow throat**. Preferring shallow wetlands, these turtles are known for their long lifespan, often living for over 70 years. Unfortunately, habitat loss has put this species at risk.</p><strong>Conservation Status:</strong> Threatened<br><strong>Fun Fact:</strong> Blanding's Turtles are sometimes referred to as the “smiling turtle” due to the shape of their mouth.",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/blandings-turtle-smiling.jpg",
+          "source": "photos/blanding.jpg",
           "caption": "The Blanding's Turtle is known for its distinctive yellow throat and long lifespan."
         }
       },
@@ -149,16 +149,13 @@ stories = [
       {
         "heading": "Introduction",
         "content": "<p>Nigeria, a country rich in cultural diversity and natural beauty, is also home to an extraordinary array of reptile species. From the lush rainforests of the south to the arid savannas of the north, Nigeria's diverse ecosystems provide habitat for some of the most unique reptiles in Africa. However, like many other parts of the world, these reptiles are facing increasing threats, making conservation efforts more important than ever.</p>",
-        "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/nigeria-landscape-intro.jpg",
-          "caption": "A diverse Nigerian landscape showcasing the range of habitats available for reptiles."
-        }
+        "image": null
       },
       {
         "heading": "The African Rock Python",
         "content": "<h3>Scientific Name: <em>Python sebae</em></h3><p>One of the largest snake species in the world, the African Rock Python can be found in a variety of habitats across Nigeria, from savannas to forests. Despite its size and power, this python faces threats from habitat destruction and hunting.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/african-rock-python.jpg",
+          "source": "photos/rockpython.png",
           "caption": "The African Rock Python, one of the largest snake species in the world, is found in various habitats across Nigeria."
         }
       },
@@ -166,7 +163,7 @@ stories = [
         "heading": "The Nile Monitor",
         "content": "<h3>Scientific Name: <em>Varanus niloticus</em></h3><p>This large, agile lizard is commonly found near rivers and lakes. Known for its impressive swimming ability, the Nile Monitor plays a key role in controlling pest populations but is often hunted for its skin.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/nile-monitor-lizard.jpg",
+          "source": "photos/nilemonitor.jpeg",
           "caption": "The Nile Monitor, a large and agile lizard, plays a crucial role in controlling pest populations in Nigeria."
         }
       },
@@ -174,7 +171,7 @@ stories = [
         "heading": "The West African Crocodile",
         "content": "<h3>Scientific Name: <em>Crocodylus suchus</em></h3><p>Once considered the same species as the Nile Crocodile, the West African Crocodile inhabits freshwater habitats across Nigeria. It is a keystone species, crucial for maintaining the balance of aquatic ecosystems.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/west-african-crocodile.jpg",
+          "source": "photos/westcroc.png",
           "caption": "The West African Crocodile, a keystone species in Nigeria's freshwater ecosystems."
         }
       },
@@ -182,7 +179,7 @@ stories = [
         "heading": "The Dwarf Crocodile",
         "content": "<h3>Scientific Name: <em>Osteolaemus tetraspis</em></h3><p>This small and secretive crocodile is primarily found in the rainforests of southern Nigeria. It is critically endangered due to habitat loss and hunting for bushmeat.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/dwarf-crocodile-endangered.jpg",
+          "source": "photos/dwarfcroc.jpg",
           "caption": "The critically endangered Dwarf Crocodile, found in the rainforests of southern Nigeria."
         }
       },
@@ -190,7 +187,7 @@ stories = [
         "heading": "The African Helmeted Turtle",
         "content": "<h3>Scientific Name: <em>Pelomedusa subrufa</em></h3><p>This common but fascinating turtle species is often seen in ponds and rivers. It plays an important role in the aquatic food chain but faces threats from pollution and waterway destruction.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/african-helmeted-turtle.jpg",
+          "source": "photos/helmetturtle.png",
           "caption": "The African Helmeted Turtle is commonly found in ponds and rivers across Nigeria."
         }
       },
@@ -198,7 +195,7 @@ stories = [
         "heading": "Threats to Reptiles in Nigeria",
         "content": "Despite their ecological importance, reptiles in Nigeria are under significant threat from various human activities:<ul><li><strong>Habitat Destruction:</strong> Deforestation, agricultural expansion, and urban development are rapidly reducing their natural habitats.</li><li><strong>Illegal Hunting and Trade:</strong> Many reptiles are hunted for their skins, meat, or for use in traditional medicine.</li><li><strong>Pollution:</strong> Water pollution from industrial waste and runoff is contaminating aquatic habitats.</li><li><strong>Climate Change:</strong> Changes in temperature and rainfall patterns are affecting reproductive cycles.</li></ul>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/nigeria-deforestation.jpg",
+          "source": "photos/nigeriacut.jpg",
           "caption": "Habitat destruction, such as deforestation, poses a significant threat to Nigeria's reptile populations."
         }
       },
@@ -206,7 +203,7 @@ stories = [
         "heading": "Conservation Efforts in Nigeria",
         "content": "<p>Conservation efforts in Nigeria are vital to protect and preserve these unique reptile species. Key initiatives include:</p><ul><li>**Protected Areas:** Establishing and maintaining national parks and wildlife reserves.</li><li>**Community Engagement:** Programs that educate and involve local communities in conservation efforts.</li><li>**Research and Monitoring:** Conducting research on reptile populations and threats to develop effective strategies.</li><li>**Legislation and Enforcement:** Strengthening and enforcing laws against illegal hunting and trade.</li><li>**Education and Awareness:** Raising public awareness about the importance of reptiles.</li></ul>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/nigerian-conservationists.jpg",
+          "source": "photos/nigeriapark.jpg",
           "caption": "Conservation efforts in Nigeria focus on protecting natural habitats and engaging local communities."
         }
       },
@@ -218,10 +215,7 @@ stories = [
       {
         "heading": "Conclusion",
         "content": "<p>Reptiles are an integral part of Nigeria's rich biodiversity, playing vital roles in ecosystems and cultural heritage. However, without concerted conservation efforts, many of these species could disappear. By protecting reptiles, we are also safeguarding the health of our ecosystems and preserving the natural world for future generations.</p>",
-        "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/nigerian-wildlife-vibrant.jpg",
-          "caption": "By protecting reptiles, we help preserve Nigeria's rich biodiversity for future generations."
-        }
+        "image": null
       }
     ]
   },
@@ -231,7 +225,7 @@ stories = [
     "slug": "lizards-in-southwest-native-american-culture",
     "author": "Alyssa Lu",
     "date": "2024-08-20",
-    "thumbnail": "https://drive.google.com/thumbnail?id=1Nn-N2NUWUvSb7cEo-D7fcHCBOiq8xkjF",
+    "thumbnail": "photos/nativeamerican.png",
     "tags": [
       "native american",
       "southwest",
@@ -246,7 +240,7 @@ stories = [
         "heading": "Lizards: More Than Backyard Accessories",
         "content": "<p>If you're ever taking a stroll on a dirt path in Phoenix at night, you can sometimes hear a faint twitchy scurrying sound around your footsteps. This is usually a lizard; one of the cold-blooded creatures who adore the Southwest heat.</p><p>While modern residents view them as simple backyard accessories, for the Navajo and other Native Southwest tribes, they have much more spiritual value.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/seedpot-lizard-warriors.jpg",
+          "source": "photos/nativeamerican.png",
           "caption": "A 2014-04 Seedpot with Lizard and Horned Toad Warriors Hunting Ants."
         }
       },
@@ -259,7 +253,7 @@ stories = [
         "heading": "The Venomous Gila Monster",
         "content": "<p>The Gila Monster, which unlike most lizards is venomous, has stories about **resurrecting warriors** who fell in battle. Their powerful presence contributes to their spiritual standing within tribal narratives.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/gila-monster-venomous.jpg",
+          "source": "photos/gila.png",
           "caption": "A picture of a Gila Monster, known for its venom and its role in stories of resurrection."
         }
       },
@@ -267,7 +261,7 @@ stories = [
         "heading": "The Horned Toad: Grandfather of Protection",
         "content": "<p>One of the most important reptiles in Navajo culture is the Horned Toad, who is also called **Grandfather (Cheii)**. One Navajo story shows that when Lightning challenged Horned Toad, the toad averted the attacks each time using songs and eventually defeated Lightning with its spikes. Thus, his songs are used for **protection**.</p><p>Because of its array of spikes, the horned toad is a powerful symbol of protection—not only of one's physical body, but also one's mind, spirit, and emotions, due to its proximity to the ground.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/horned-lizard-protection.jpg",
+          "source": "photos/hornedtoad.png",
           "caption": "A picture of a Horned lizard, or 'Grandfather,' respected as a symbol of protection."
         }
       },
@@ -289,7 +283,7 @@ stories = [
     "slug": "the-role-of-reptiles-maintaining-biodiversity",
     "author": "Jacob Shi",
     "date": "2024-08-08",
-    "thumbnail": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/ecological-role-feature.jpg",
+    "thumbnail": "photos/gophertortoise.png",
     "tags": [
       "ecology",
       "biodiversity",
@@ -308,7 +302,7 @@ stories = [
         "heading": "Role as Predators and Keystone Species",
         "content": "<p>Reptiles act as **predators** that help control the population of their prey, which includes insects, birds, and small mammals. As such, they mitigate agricultural and habitat damage caused by uncontrolled pests and an overpopulation of prey species.</p><p>Reptiles can also be a **keystone species**, defined as one disproportionately influential to its environment relative to its population size. A prime example is the Gopher Tortoise native to the southeastern United States.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/gopher-tortoise-keystone.jpg",
+          "source": "photos/gophertortoise.png",
           "caption": "The Gopher Tortoise is a keystone species, digging burrows used as shelter by over 300 other species."
         }
       },
@@ -340,7 +334,7 @@ stories = [
     "slug": "role-of-native-green-anoles-and-invasive-brown-anoles",
     "author": "Irina Tabacila and Dean Zacharis",
     "date": "2024-08-06",
-    "thumbnail": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svganole-competition-feature.jpg",
+    "thumbnail": "photos/anole.jpeg",
     "tags": [
       "florida",
       "anoles",
@@ -365,7 +359,7 @@ stories = [
         "heading": "Competition in Action (A Personal Encounter)",
         "content": "<p>One morning, while volunteering at Halifax Health, I took a walk through their garden. I spotted a green anole on a low branch hunting ants with quick, precise movements. As I watched, I noticed a brown anole nearby that started to interfere with the green anole's hunt by going for the same food source.</p><p>This competition highlights Florida's ecosystems, where native and invasive species compete for resources.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/invasive-brown-anole.jpg",
+          "source": "photos/anole.jpeg",
           "caption": "An invasive Brown Anole observed competing for food in a Florida garden."
         }
       },
@@ -373,7 +367,7 @@ stories = [
         "heading": "Ecological Consequences of Resource Competition",
         "content": "<p>This competition has forced green anoles to higher perches, limiting their range and access to resources, which has significant ecological consequences. This change affects their behavior, feeding patterns, and overall chance of survival in the near future.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/native-green-anole.jpg",
+          "source": "photos/greenanole.jpg",
           "caption": "A Native Green Anole showcasing its vibrant color, a species being pushed to higher habitats."
         }
       },
@@ -390,7 +384,7 @@ stories = [
     "slug": "youth-communities-helping-turtles-wetlands",
     "author": "Darwin Li",
     "date": "2024-07-25",
-    "thumbnail": "https://reptilemap.org/wp-content/uploads/2024/07/jose-ruales-IoR7WpZPNwM-unsplash-scaled.jpg",
+    "thumbnail": "photos/turtlehero.jpg",
     "tags": [
       "turtles",
       "wetlands",
@@ -404,7 +398,7 @@ stories = [
         "heading": "Introduction: Turtles are Wildlife Heroes",
         "content": "<p>About 70% of fish and wildlife across Eastern North America depend on freshwater turtles to clean water, cycle nutrients, and spread seeds & biodiversity. However, 75% of the world’s turtles are in jeopardy of becoming extinct and all of Canada’s are listed as Species at Risk.</p>",
         "image": {
-          "source": "https://www.placeholderimage.online/placeholder/800/600/f3f4f6/1f2937?font=Lato.svg/freshwater-turtle-habitat.jpg",
+          "source": "photos/turtlehero.jpg",
           "caption": "Freshwater habitats across North America rely heavily on the presence of turtle species."
         }
       },
