@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <script src="blogs.json"></script>
+    <script src="events.json"></script>
 
     <style>
         body {
@@ -82,12 +82,12 @@
         M.Sidenav.init(document.querySelector('.sidenav'));
 
         const params = new URLSearchParams(window.location.search);
-        const index = params.get('story');
+        const index = params.get('event');
 
-        if (index > stories.length) {
-            data = stories[0];
+        if (index > events.length) {
+            data = events[0];
         } else {
-            data = stories[index]; 
+            data = events[index]; 
         }
         
         const blogContainer = document.getElementById('blog-content');
@@ -98,10 +98,16 @@
         title.textContent = data.title;
         blogContainer.appendChild(title);
 
+        // Create and append the subtitle
+        const subtitle = document.createElement('h5');
+        subtitle.classList.add('center-align', 'green-text');
+        subtitle.textContent = data.date;
+        blogContainer.appendChild(subtitle);
+
         // Create and append the author and date
         const meta = document.createElement('p');
         meta.classList.add('center-align', 'grey-text');
-        meta.innerHTML = `By: ${data.author} | Published: ${data.date}`;
+        meta.innerHTML = `By: ${data.author}`;
         blogContainer.appendChild(meta);
 
         // Loop through sections and create content
@@ -136,8 +142,8 @@
 
         mypages = document.getElementById("mypages");
         myhtml = "<ul class='pagination center-align'>";
-        for (i=0; i<stories.length;i++) {
-            myhtml = myhtml + "<li><a href='stories.html?story=" + i + "'>" + i + "</a><li>";   
+        for (i=0; i<events.length;i++) {
+            myhtml = myhtml + "<li><a href='events.html?event=" + i + "'>" + i + "</a><li>";   
         }
         myhtml = myhtml + "</ul>";
         mypages.innerHTML = myhtml;

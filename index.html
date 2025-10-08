@@ -32,7 +32,7 @@
     <header>
         <nav id="home" class="light-green darken-4 z-depth-2">
             <div class="nav-wrapper container">
-                <a href="#" class="brand-logo">Reptilemap.world</a>
+                <a href="#" class="brand-logo"><img src='logo.png'/></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#about">About Us</a></li>
@@ -217,8 +217,10 @@
         <section id="stories" class="section scrollspy">
             <div class="container center-align">
                 <h2 class="light-green-text text-darken-4">Stories</h2>
+                <!-- stories-container div populated by code -->
                 <div class="row" id="stories-container"></div>
             </div>
+            <!-- pages div populated by code -->
             <div id='pages'></div>
         </section>
 
@@ -228,9 +230,10 @@
                 <p class="flow-text">
                     Join us for our upcoming workshops, webinars, and field trips designed to educate and engage reptile enthusiasts and conservationists.
                 </p>
-                <div class="row" id="events-container">
-                    </div>
+                <div class="row" id="events-container"></div>
             </div>
+            <!-- events div populated by code -->
+            <div id='epages'></div>
         </section>
 
         <section id="contact" class="section scrollspy">
@@ -258,7 +261,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">The Reptile Map</h5>
+                    <h5 class="white-text">Reptilemap.world</h5>
                     <p class="grey-text text-lighten-4">A global initiative for reptile conservation.</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -277,17 +280,21 @@
         </div>
     </footer>
 
+    <!-- import javascript from Materialize CSS framework -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- import javascript from Leaflet map framework -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     
     <script>
         
-        // The observation list will be managed dynamically
+        // The observation is managed dynamically
         let observations = [];
         let mapInstance = null;
         let markers = [];
         let clickedCoords = null; // Global variable to hold clicked map coordinates
+
+        // Data Google sheet published CSV, Middleware Google App
         const OBS_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAI3iRgPCDrYWFgOV_8rbswRvu2W4pYg29OS4jIRvpDxX0kA2sLyPSVTC83whLf3JfArhKIr87jEK6/pub?gid=0&single=true&output=csv';
         const SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbxI8w2hYv41EsB2XC8jnE5qDp8APzYFzBgfoG6yZviA307C8w2VwG37i7bBCYRDIN0/exec';
 
@@ -316,7 +323,7 @@
             }
         }
 
-        // Fetch observations and initialize the map
+        // Asynchronously fetch observations and initialize the map
         async function fetchObservations() {
             try {
                 const response = await fetch(OBS_SHEET_URL);
@@ -416,30 +423,39 @@
 
         });
 
-
-        // Vanilla JS for rendering static data (Events and Stories)
+        // Rendering static data from json files (Events and Stories)
         function renderContent() {
-            // Render Events
-            const eventsContainer = document.getElementById('events-container');
-
-            events.forEach(event => {
-                const eventHtml = `
-                    <div class="col s12 m6">
-                        <div class="card large light-green lighten-5">
-                            <div class="card-content black-text left-align">
-                                <span class="card-title light-green-text text-darken-4">${event.title}</span>
-                                <p><strong>Date:</strong> ${event.date}</p>
-                                <p><strong>Location:</strong> ${event.location}</p>
-                                <p>${event.description}</p>
+ 
+            // Render Stories
+            const eventContainer = document.getElementById('events-container');
+            events.slice(0, 3).forEach((event, index) => {
+                const storyHtml = `
+                    <div class="col s12 m6 l4">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="${event.thumbnail}">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator light-green-text text-darken-4">${event.title}</span>
+                                <p><a href="events.html?event=${index}">Read More</a></p>
                             </div>
                         </div>
                     </div>
                 `;
-                eventsContainer.insertAdjacentHTML('beforeend', eventHtml);
+                eventContainer.insertAdjacentHTML('beforeend', storyHtml);
+
+                var epages = document.getElementById('epages');
+                var myhtml = "<div class='row center'><ul class='pagination'>"
+                events.forEach((event, index) => {
+                    myhtml = myhtml + "<li><a href='events.html?event=" + index + "'>" + index + "</a></li>"
+                });
+                myhtml = myhtml + "</ul></div>"
+                epages.innerHTML = myhtml;
+
             });
 
-            // Render Stories (first 3 only, as per original Vue code)
-            const storiesContainer = document.getElementById('stories-container');
+            // Render Stories (first 3 only)
+            const storyContainer = document.getElementById('stories-container');
             stories.slice(0, 3).forEach((story, index) => {
                 const storyHtml = `
                     <div class="col s12 m6 l4">
@@ -454,17 +470,19 @@
                         </div>
                     </div>
                 `;
-                storiesContainer.insertAdjacentHTML('beforeend', storyHtml);
+                storyContainer.insertAdjacentHTML('beforeend', storyHtml);
+
+                var pages = document.getElementById('pages');
+                var myhtml = "<div class='row center'><ul class='pagination'>"
+                stories.forEach((story, index) => {
+                    myhtml = myhtml + "<li><a href='stories.html?story=" + index + "'>" + index + "</a></li>"
+                });
+                myhtml = myhtml + "</ul></div>"
+                pages.innerHTML = myhtml;
+                
             });
 
-            var pages = document.getElementById('pages');
-            var myhtml = "<div class='row center'><ul class='pagination'>"
-            stories.forEach((story, index) => {
-                myhtml = myhtml + "<li><a href='stories.html?story=" + index + "'>" + index + "</a></li>"
-            });
-            myhtml = myhtml + "</ul></div>"
-            console.log(myhtml);
-            pages.innerHTML = myhtml;
+
 
         }
 

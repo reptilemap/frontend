@@ -1,18 +1,117 @@
 events = [
-		{
-	  "title": "Nature in Winter",
-	  "author": "Razi Taraji",
-	  "publication_date": "October 30, 2024",
-	  "date": "Tuesday, November 26 · 6:30 – 7:30pm EST",
-	  "location": "8728 Buffalo Avenue, Niagara Falls, NY 14304, United States",
-	  "description": "Come to The Niagara Falls Public Library LaSalle Branch and learn about how animals in Western NY adapt and respond to the changing environment and cooler temperatures. Which animals hibernate? What happens to reptiles, amphibians, and insects? How do birds find food? This talk will be given by a naturalist from Niagara Falls State Park and is sponsored by The Niagara Falls Public Library. Free parking in the back of the library."
-	  },
-	{
-	  "title": "The Winter Show at The Wurlitzer",
-	  "author": "Jacob Shi",
-	  "publication_date": "October 10, 2024",
-	  "date": "Saturday, January 18, 2025 · 10am – 5pm EST",
-	  "location": "908 Niagara Falls Boulevard, North Tonawanda, NY 14120, United States",
-	  "description": "Get ready for a slithery and scaly extravaganza at the The Winter Show at The Wurlitzer brought to you by WNY Reptiles! Join us for a day filled with fascinating reptiles, educational exhibits, and interactive experiences. Whether you’re a seasoned reptile enthusiast, oddities collector, plant aficionado, or just curious about these amazing creatures, this event is perfect for all ages. Come meet a variety of reptiles up close, learn about their habitats, and even have the chance to handle some of them! Check out our carnivorous plant displays, maybe even take one home! Do you like the unusual? Visit our oddities vendors for preserved specimens, taxidermy, mounts and more! Don’t miss out on this unique opportunity to appreciate the beauty and diversity of reptiles while exploring the historic Wurlitzer building. Mark your calendars and join us for a day of fun and learning at the The Winter Show at The Wurlitzer!"
-	}
-]
+    {
+      "author": "Razi Taraji",
+      "date": "Tuesday, November 26, 2024 · 6:30 – 7:30pm EST",
+      "post_id": 1,
+      "sections": [
+        {
+          "heading": "Introduction",
+          "content": "<p>Come to The Niagara Falls Public Library LaSalle Branch and learn about how animals in Western NY adapt and respond to the changing environment and cooler temperatures.</p>",
+          "image": {
+            "source": "photos/gatorsnow.jpg",
+            "caption": "Alligators adapt to frozen zoo enclosure"
+          }
+        },
+        {
+          "heading": "What is this talk about?",
+          "content": "<p>Which animals hibernate? What happens to reptiles, amphibians, and insects? How do birds find food?</p>",
+          "image": null
+        },
+        {
+          "heading": "Who is speaking?",
+          "content": "This talk will be given by a naturalist from Niagara Falls State Park and is sponsored by The Niagara Falls Public Library. Free parking in the back of the library.</p>",
+          "image": null
+        }
+      ],
+      "slug": "nature-in-winter",
+      "summary": "8728 Buffalo Avenue, Niagara Falls, NY 14304, United States",
+      "tags": [
+        "Niagara Falls",
+        "winter",
+        "reptiles",
+        "hibernate"
+      ],
+      "thumbnail": "photos/gatorsnow.jpg",
+      "title": "Nature in Winter"
+    },
+    {
+      "post_id": 2,
+      "title": "The Winter Show at The Wurlitzer",
+      "slug": "winter-wurlitzer",
+      "author": "Jacob Shi",
+      "date": "Saturday, January 18, 2025 · 10am – 5pm EST",
+      "thumbnail": "photos/wurlitzer.jpg",
+      "tags": [
+        "Western New York",
+        "reptiles",
+        "Wurlitzer",
+        "sea turtles"
+      ],
+      "summary": "908 Niagara Falls Boulevard, North Tonawanda, NY 14120, United States",
+      "sections": [
+        {
+          "heading": "Introduction",
+          "content": "<p>Get ready for a slithery and scaly extravaganza at the The Winter Show at The Wurlitzer brought to you by WNY Reptiles!</p>",
+          "image": {
+            "source": "photos/wurlitzer.jpg",
+            "caption": "WNY reptiles presents Winter at the Wurlitzer"
+          }
+        },
+        {
+          "heading": "What is this talk about?",
+          "content": "<p>Join us for a day filled with fascinating reptiles, educational exhibits, and interactive experiences. Whether you’re a seasoned reptile enthusiast, oddities collector, plant aficionado, or just curious about these amazing creatures, this event is perfect for all ages.</p>",
+          "image": null
+        },
+        {
+          "heading": "What will I learn?",
+          "content": "Come meet a variety of reptiles up close, learn about their habitats, and even have the chance to handle some of them! Check out our carnivorous plant displays, maybe even take one home! Do you like the unusual? Visit our oddities vendors for preserved specimens, taxidermy, mounts and more! Don’t miss out on this unique opportunity to appreciate the beauty and diversity of reptiles while exploring the historic Wurlitzer building.</p>",
+          "image": null
+        },
+        {
+          "heading": "Mark your calendars",
+          "content": "Mark your calendars and join us for a day of fun and learning at the The Winter Show at The Wurlitzer!</p>",
+          "image": null
+        }
+      ]
+    },
+    {
+      "author": "Darwin Li",
+      "date": "Friday, Nov 12, 2021",
+      "post_id": 2,
+      "sections": [
+        {
+          "heading": "Introduction",
+          "content": "<p>Not a PA Day for your school? No problem! An event recording will be emailed to all registrants. The recording will be accessible until 5 PM on Friday, November 26.</p>",
+          "image": {
+            "source": "photos/littleray.png",
+            "caption": "Little Ray's nature centre"
+          }
+        },
+        {
+          "heading": "What is this talk about?",
+          "content": "<p>Bring world-class nature education into your living room with a Zoo-Zoom experience! Join other alumni kids from around the world to learn about an awesome assortment of cool creatures with an Animal Educator from Little Ray’s Nature Centre.</p>",
+          "image": null
+        },
+        {
+          "heading": "What will I learn?",
+          "content": "<p>This hour-long session features a 45-minute presentation showcasing 8-10 rescued reptiles and mammals, followed by a 15-minute interactive Q&A where kids can learn even more about their favourite animals.</p>",
+          "image": null
+        },
+        {
+          "heading": "Please note",
+          "content": "Please note, this Zoom Meeting will be recorded and shared with registrants. You may activate or deactivate your camera at your discretion.\n\n\n",
+          "image": null
+        }
+      ],
+      "slug": "little-rays",
+      "summary": "Zoom meeting",
+      "tags": [
+        "Little Ray's",
+        "reptiles",
+        "zoom",
+        "animal educator"
+      ],
+      "thumbnail": "photos/littleray.png",
+      "title": "Little Ray’s Animal Adventure\n\n\n"
+    }
+  ]
