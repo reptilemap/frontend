@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
-    <script src="events.json"></script>
-    <script src="blogs.json"></script>
-
     <style>
         #map { height: 450px; }
         body { background-color: #f8f8f8; }
         .hero-bg { background: linear-gradient(to right, #4CAF50, #8BC34A); }
     </style>
+
 </head>
 <body>
 
@@ -292,7 +290,7 @@
         let observations = [];
         let mapInstance = null;
         let markers = [];
-        let clickedCoords = null; // Global variable to hold clicked map coordinates
+        let clickedCoords = null; // Global variable for map coordinates
 
         // Data Google sheet published CSV, Middleware Google App
         const OBS_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAI3iRgPCDrYWFgOV_8rbswRvu2W4pYg29OS4jIRvpDxX0kA2sLyPSVTC83whLf3JfArhKIr87jEK6/pub?gid=0&single=true&output=csv';
@@ -423,69 +421,77 @@
 
         });
 
-        // Rendering static data from json files (Events and Stories)
-        function renderContent() {
- 
-            // Render Stories
-            const eventContainer = document.getElementById('events-container');
-            events.slice(0, 3).forEach((event, index) => {
-                const storyHtml = `
-                    <div class="col s12 m6 l4">
-                        <div class="card medium">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="${event.thumbnail}">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator light-green-text text-darken-4">${event.title}</span>
-                                <p><a href="events.html?event=${index}">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                eventContainer.insertAdjacentHTML('beforeend', storyHtml);
+        // Function to fetch the local blog JSON data
+        async function fetchJsonData(filePath) {
 
-                var epages = document.getElementById('epages');
-                var myhtml = "<div class='row center'><ul class='pagination'>"
-                events.forEach((event, index) => {
-                    myhtml = myhtml + "<li><a href='events.html?event=" + index + "'>" + index + "</a></li>"
-                });
-                myhtml = myhtml + "</ul></div>"
-                epages.innerHTML = myhtml;
+          try {
+            // 2. Use the 'fetch' API to make a network request.
+            const response = await fetch(filePath);
 
-            });
+            // 3. Check if the request was successful (status 200-299).
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
 
-            // Render Stories (first 3 only)
-            const storyContainer = document.getElementById('stories-container');
-            stories.slice(0, 3).forEach((story, index) => {
-                const storyHtml = `
-                    <div class="col s12 m6 l4">
-                        <div class="card medium">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="${story.thumbnail}">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator light-green-text text-darken-4">${story.title}</span>
-                                <p><a href="stories.html?story=${index}">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                storyContainer.insertAdjacentHTML('beforeend', storyHtml);
+            // 4. Use the .json() method to parse the response body as JSON.
+            const data = await response.json();
 
-                var pages = document.getElementById('pages');
-                var myhtml = "<div class='row center'><ul class='pagination'>"
-                stories.forEach((story, index) => {
-                    myhtml = myhtml + "<li><a href='stories.html?story=" + index + "'>" + index + "</a></li>"
-                });
-                myhtml = myhtml + "</ul></div>"
-                pages.innerHTML = myhtml;
-                
-            });
+            // 5. Do something with the fetched data
+            console.log('Successfully fetched and parsed data:', data);
 
+            // You can return the data or call another function with it
+            renderIt(data,filePath);
 
-
+          } catch (error) {
+            // 6. Handle any errors that occurred during the fetch or parsing.
+            console.error('There was a problem fetching the data:', error);
+          }
         }
 
+        // Call the function to start the fetch process, and then render
+        files = ['events.json','blogs.json'];
+        for (i=0;i<files.length;i++) {
+          fetchJsonData(files[i]); // render Events and Stories
+        }
+
+        // Rendering static data from json files (Events and Stories)
+        function renderIt(data,filePath) {
+ 
+            let genericContainer = null;
+            let genericPages = null;
+            if (filePath == 'events.json') {
+                genericContainer = document.getElementById('events-container');
+                genericPages = document.getElementById('epages');
+            } else {
+                genericContainer = document.getElementById('stories-container');
+                genericPages = document.getElementById('pages');
+            }
+
+            data.slice(0, 3).forEach((thing, index) => {
+                const myHtml = `
+                    <div class="col s12 m6 l4">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="${thing.thumbnail}">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator light-green-text text-darken-4">${thing.title}</span>
+                                <p><a href="render.html?file=${filePath}&thing=${index}">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                genericContainer.insertAdjacentHTML('beforeend', myHtml);
+
+                var myhtml = "<div class='row center'><ul class='pagination'>"
+                data.forEach((thing, index) => {
+                    myhtml = myhtml + "<li><a href='render.html?file=" + filePath + "&thing=" + index + "'>" + index + "</a></li>"
+                });
+                myhtml = myhtml + "</ul></div>"
+                genericPages.innerHTML = myhtml;
+
+            });
+        }
 
         // Initialization on DOM Load
         document.addEventListener('DOMContentLoaded', () => {
@@ -495,8 +501,6 @@
             // Initialize the Map and fetch data
             initMap();
 
-            // Render static data
-            renderContent();
         });
 
     </script>
