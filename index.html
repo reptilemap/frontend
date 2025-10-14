@@ -48,9 +48,9 @@
         <section class="hero-bg white-text section no-pad-bot">
             <div class="container center-align">
                 <br><br>
-                <h1 class="header light-green-text text-lighten-5">Mapping the World's Reptiles</h1>
+                <h1 id='main_title' class="header light-green-text text-lighten-5">A</h1>
                 <div class="row center">
-                    <h5 class="header col s12 light">A global initiative to understand reptile biogeography, monitor populations, and inform conservation strategies.</h5>
+                    <h5 id='main_splash' class="header col s12 light"></h5>
                 </div>
                 <div class="row center">
                     <a href="#map-section" class="btn-large waves-effect waves-light white light-green-text text-darken-4">View Map</a>
@@ -61,33 +61,32 @@
 
         <section id="conference" class="section scrollspy">
             <div class="container center-align">
-                <h2 class="light-green-text text-darken-4">ReptileWorld 2025</h2>
-                <h4 class="light-gray-text">October 26 @1pm on zoom</h4>
-                <p class="flow-text">
-                    Join us for a day of ...
-                </p>
+                <h2 id='c_title' class="light-green-text text-darken-4"></h2>
+                <h4 id='c_date' class="light-gray-text lighten-4"></h4>
+                <h4 id='c_location'></h4>
+                <p id='c_desc' class="flow-text"></p>
                 <div class="row">
                     <div class="col s12 m6 l4">
                         <div class="card small light-green lighten-5">
                             <div class="card-content light-green-text text-darken-4">
-                                <h4 class="card-title">Keynote address</h4>
-                                <p>Importance of conservation, citizen science and empowering students with AI vibe coding.</p>
+                                <h4 id='c1_title' class="card-title"></h4>
+                                <p id='c1_desc'></p>
                             </div>
                         </div>
                     </div>
                     <div class="col s12 m6 l4">
                         <div class="card small light-green lighten-5">
                             <div class="card-content light-green-text text-darken-4">
-                                <h4 class="card-title">Panel discussions</h4>
-                                <p>blah blah.</p>
+                                <h4 id='c2_title' class="card-title"></h4>
+                                <p id='c2_desc'></p>
                             </div>
                         </div>
                     </div>
                     <div class="col s12 m6 l4">
                         <div class="card small light-green lighten-5">
                             <div class="card-content light-green-text text-darken-4">
-                                <h4 class="card-title">Q&A</h4>
-                                <p>blah blah.</p>
+                                <h4 id='c3_title' class="card-title"></h4>
+                                <p id='c3_desc'></p>
                             </div>
                         </div>
                     </div>
@@ -95,10 +94,10 @@
             </div>
         </section>
 
-        <section id="about" class="section scrollspy">
+        <section id="youtube" class="section scrollspy">
             <div class = "col s12 m6">
                 <div class="video-container">
-                    <iframe width="80%" src="https://www.youtube.com/embed/Tix77RdPMxk?si=IPUgBqzYJ9H_ctk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id='video' width="80%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -108,12 +107,7 @@
                 <div class="row">
                     <div class="col s12 center">
                         <h2 class="light-green-text text-darken-4">About Us</h2>
-                        <p class="flow-text">
-                            The Reptile Map is dedicated to creating a comprehensive, interactive, and accessible global mapping platform that documents the distribution and diversity of reptile species around the world. We aim to establish a global network of citizen scientists and researchers to gather crucial data.
-                        </p>
-                        <p class="flow-text">
-                            Our mission is to be a valuable resource for understanding reptile biogeography, monitoring population trends, identifying conservation hotspots, and informing strategies for the protection and management of reptiles and their habitats.
-                        </p>
+                        <div id='about_us' class='flow-text'></div>
                     </div>
                 </div>
             </div>
@@ -180,34 +174,9 @@
         <section id="projects-section" class="section scrollspy grey lighten-3">
             <div class="container center-align">
                 <h2 class="light-green-text text-darken-4">Our Projects</h2>
-                <p class="flow-text">
-                    We are involved in various projects aimed at reptile research, habitat restoration, and community engagement. From tracking endangered species to educating local communities, our work spans the globe.
-                </p>
+                <p id='prj_splash' class="flow-text"></p>
                 <div class="row">
-                    <div class="col s12 m6 l4">
-                        <div class="card small light-green lighten-5">
-                            <div class="card-content light-green-text text-darken-4">
-                                <h4 class="card-title">Species Monitoring</h4>
-                                <p>Implementing advanced tracking and monitoring programs for vulnerable reptile populations across diverse ecosystems.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <div class="card small light-green lighten-5">
-                            <div class="card-content light-green-text text-darken-4">
-                                <h4 class="card-title">Habitat Restoration</h4>
-                                <p>Working to restore critical reptile habitats, ensuring safe and thriving environments for various species.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <div class="card small light-green lighten-5">
-                            <div class="card-content light-green-text text-darken-4">
-                                <h4 class="card-title">Citizen Science</h4>
-                                <p>Engaging the public in data collection efforts, transforming everyday citizens into vital contributors to conservation.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div id='allprjs'></div>
                 </div>
             </div>
         </section>
@@ -449,7 +418,7 @@
         }
 
         // Call the function to start the fetch process, and then render
-        files = ['events.json','blogs.json'];
+        files = ['events.json','blogs.json', 'init.json'];
         for (i=0;i<files.length;i++) {
           fetchJsonData(files[i]); // render Events and Stories
         }
@@ -462,9 +431,12 @@
             if (filePath == 'events.json') {
                 genericContainer = document.getElementById('events-container');
                 genericPages = document.getElementById('epages');
-            } else {
+            } else if (filePath == 'blogs.json') {
                 genericContainer = document.getElementById('stories-container');
                 genericPages = document.getElementById('pages');
+            } else {
+                renderInit(data);
+                return;
             }
 
             data.slice(0, 3).forEach((thing, index) => {
@@ -482,7 +454,6 @@
                     </div>
                 `;
                 genericContainer.insertAdjacentHTML('beforeend', myHtml);
-
                 var myhtml = "<div class='row center'><ul class='pagination'>"
                 data.forEach((thing, index) => {
                     myhtml = myhtml + "<li><a href='render.html?file=" + filePath + "&thing=" + index + "'>" + index + "</a></li>"
@@ -491,6 +462,54 @@
                 genericPages.innerHTML = myhtml;
 
             });
+        }
+
+        function renderInit(data) {
+            let main_title = document.getElementById('main_title');
+            let main_splash = document.getElementById('main_splash');
+            let prj_splash = document.getElementById('prj_splash');
+            main_title.innerHTML = data.general_settings.main_title;
+            main_splash.innerHTML = data.general_settings.main_splash;
+            prj_splash.innerHTML = data.general_settings.prj_splash;
+
+            document.getElementById('c_title').innerHTML = data.conference[0].title;
+            document.getElementById('c_date').innerHTML = data.conference[0].date;
+            document.getElementById('c_location').innerHTML = data.conference[0].location;
+            document.getElementById('c_desc').innerHTML = data.conference[0].description;
+            document.getElementById('c1_title').innerHTML = data.conference[0].sections[0].title;
+            document.getElementById('c1_desc').innerHTML = data.conference[0].sections[0].description;
+            document.getElementById('c2_title').innerHTML = data.conference[0].sections[1].title;
+            document.getElementById('c2_desc').innerHTML = data.conference[0].sections[1].description;
+            document.getElementById('c3_title').innerHTML = data.conference[0].sections[2].title;
+            document.getElementById('c3_desc').innerHTML = data.conference[0].sections[2].description;
+
+            // Youtube
+            let myiframe = document.getElementById('video');
+            myiframe.src = data.videos[0].link;
+
+            let allprjs = document.getElementById('allprjs');
+            for (i=0;i<data.projects.length;i++) {
+                myHtml = 
+                `<div class="col s12 m6 l4">
+                    <div class="card small light-green lighten-5">
+                        <div class="card-content light-green-text text-darken-4">
+                            <h4 class="card-title">${data.projects[i].title}</h4>
+                            <p>${data.projects[i].description}</p>
+                        </div>
+                    </div>
+                </div>`
+                allprjs.insertAdjacentHTML('beforeend', myHtml);
+            }
+
+            let about_us = document.getElementById('about_us');
+            for (i=0;i<data.about_us.length;i++) {
+               myHtml = 
+               `
+                <p>${data.about_us[i].content}<p>
+               ` 
+               about_us.insertAdjacentHTML('beforeend', myHtml);
+            }
+
         }
 
         // Initialization on DOM Load
