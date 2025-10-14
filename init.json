@@ -1,0 +1,60 @@
+{
+  "general_settings": {
+    "site_name": "Reptilemap.world",
+    "main_title": "Mapping the World's Reptiles",
+    "main_splash": "A global initiative to understand reptile biogeography, monitor populations, and inform conservation strategies.",
+    "logo_path": "logo.png",
+    "prj_splash": "We are involved in various projects aimed at reptile research, habitat restoration, and community engagement. From tracking endangered species to educating local communities, our work spans the globe.",
+  },
+  "conference": [
+    {
+      "title": "Reptile World 2025",
+      "date": "2025-10-26",
+      "location": "Virtual Event",
+      "description": "Importance of conservation, harnessing the power of AI (LLM) and free platforms to empower citizen science.",
+      "sections": [
+        {
+          "title": "Keynote",
+          "description": "Importance of conservation, citizen science and empowering students with AI vibe coding."
+        },
+        {
+          "title": "Panel discussion",
+          "description": "blah"
+        },
+        {
+          "title": "Citizen science",
+          "description": "In this session you will learn how to use free platforms and harness the power of vibe coding to create powerful citizen science applications."
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "link": "https://www.youtube.com/embed/Tix77RdPMxk?si=IPUgBqzYJ9H_ctk3",
+    }
+  ],
+  "about_us": [
+    {
+      "section_title": null,
+      "content": "The Reptile Map is dedicated to creating a comprehensive, interactive, and accessible global mapping platform that documents the distribution and diversity of reptile species around the world. We aim to establish a global network of citizen scientists and researchers to gather crucial data."
+    },
+    {
+      "section_title": null,
+      "content": "Our mission is to be a valuable resource for understanding reptile biogeography, monitoring population trends, identifying conservation hotspots, and informing strategies for the protection and management of reptiles and their habitats."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Species Monitoring",
+      "description": "Implementing advanced tracking and monitoring programs for vulnerable reptile populations across diverse ecosystems."
+    },
+    {
+      "title": "Habitat Restoration",
+      "description": "Working to restore critical reptile habitats, ensuring safe and thriving environments for various species."
+    },
+    {
+      "title": "Citizen Science",
+      "description": "Engaging the public in data collection efforts, transforming everyday citizens into vital contributors to conservation."
+    }
+  ]
+}
