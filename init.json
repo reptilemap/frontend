@@ -8,29 +8,38 @@
   },
   "conference": [
     {
-      "title": "2025 ReptileMap Summit｜Turning Curiosity into Conservation with Technology",
-      "date": "2025-10-26 Sunday 1:30-4:00p.m ET ",
-      "location": "Webinar ID:  85765751282  via Zoom",
-      "description": "From Reptiles to Real-World Impact: Empowering Youth Citizen Scientists Through AI and Action.",
-       "sections": [
+      "title": "Reptile World 2025",
+      "date": "Sunday, October 26, 2025 1:30–4:00 p.m. ET",
+      "location": "Webinar ID: 85765751282 via Zoom https://us06web.zoom.us/j/85765751282",
+      "description": "Importance of conservation, harnessing the power of AI (LLM) and free platforms to empower citizen science.",
+      "poster": "poster25.",
+      "sections": [
         {
-          "title": "Keynote",
-          "description": "Importance of conservation, citizen science and empowering students with AI vibe coding."
+          "title": "1:30-1:35 pm ET Opening Remark ",
+          "description": "2025 Summit Committee Chair"
         },
         {
-          "title": "Panel discussion",
-          "description": "Important stuff to discuss"
+          "title": "1:35- 1:55 pm ET Founder’s Address",
+          "description": "<p>The founder of The Reptile Map will share his personal experiences with reptile conservation, what drove him to start The Reptile Map, and everything else behind-the-scenes.</p><p>Darwin Li is the founder of The Reptile Map and a freshman at Harvard College. Growing up in Richmond Hill, Ontario, he worked part-time as a zookeeper, where he cultivated a love for reptile conservation and biodiversity.</p>"
         },
         {
-          "title": "Citizen science",
-          "description": "In this session you will learn how to use free platforms and harness the power of vibe coding to create powerful citizen science applications."
+          "title": "2:00-2:30 p.m. ET Dr. Anthony Barley (ASU)",
+          "description": "<p>Discover how digital mapping, iNaturalist, and genomic tools are transforming herpetology research.</p><p>Dr. Anthony Barley will share how digital mapping, iNaturalist, and genomic sequencing are transforming herpetology—from discovering new reptile and amphibian populations to uncovering the evolutionary history of whiptail lizards—and how he uses digital tools to enhance herpetology education at ASU.</p>"
+        },
+        {
+          "title": "2:30-3:00 p.m. ET SightTrack: Monitoring and Conservation with AI",
+          "description": "Explore how SightTrack, a youth-led nonprofit, uses AI and citizen science to document wildlife, map ecosystems, and drive real conservation impact across 150+ countries.<p>SighTrack has been recognized by the Intel Global AI Festival for innovation in environmental monitoring.</p>"
+        },
+        {
+          "title": "3:00-4:00p.m. ET Mark Hoel: Build a citizen science app",
+          "description": "No programming experience? No database knowledge? Know nothing about web servers? No money? NO PROBLEM! Learn to build simple citizen science apps using free platforms. No experience necessary.<p>Trained in urban planning and Geographic Information Systems, Mark is passionate about empowering youth to use data, mapping, and AI tools to make real world impact</p>"
         }
       ]
     }
   ],
   "videos": [
     {
-      "link": "https://www.youtube.com/embed/Tix77RdPMxk?si=IPUgBqzYJ9H_ctk3"
+      "link": "https://www.youtube.com/embed/t5M2lnGshQk?si=tEr-yMFzYbB_ydM8"
     }
   ],
   "about_us": [
