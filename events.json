@@ -1,117 +1,212 @@
 [
-    {
-      "author": "Razi Taraji",
-      "date": "Tuesday, November 26, 2024 · 6:30 – 7:30pm EST",
-      "post_id": 1,
-      "sections": [
-        {
-          "heading": "Introduction",
-          "content": "<p>Come to The Niagara Falls Public Library LaSalle Branch and learn about how animals in Western NY adapt and respond to the changing environment and cooler temperatures.</p>",
-          "image": {
-            "source": "photos/gatorsnow.jpg",
-            "caption": "Alligators adapt to frozen zoo enclosure"
-          }
-        },
-        {
-          "heading": "What is this talk about?",
-          "content": "<p>Which animals hibernate? What happens to reptiles, amphibians, and insects? How do birds find food?</p>",
-          "image": null
-        },
-        {
-          "heading": "Who is speaking?",
-          "content": "This talk will be given by a naturalist from Niagara Falls State Park and is sponsored by The Niagara Falls Public Library. Free parking in the back of the library.</p>",
-          "image": null
+  {
+    "post_id": 1,
+    "title": "Reptiles Alive! and Dead! at The Field Museum",
+    "slug": "field-museum-reptiles-alive-dead",
+    "author": "Unknown",
+    "date": "2025-11-13",
+    "thumbnail": "photos/field_museum.png",
+    "tags": [
+      "field museum",
+      "chicago",
+      "reptiles",
+      "museum exhibit",
+      "science",
+      "preservation",
+      "komodo dragon"
+    ],
+    "summary": "The Field Museum in Chicago is featuring two kinds of reptile exhibits: the 'Reptiles Alive!' exhibit, open until April 5, 2026, featuring 20 live species, and 'Reptiles Dead!', represented by the museum's vast collection of 11 million embalmed specimens. These 'pickled creatures' are crucial for scientific research, allowing for the discovery of new species and the study of minute anatomical variations.",
+    "sections": [
+      {
+        "heading": "Reptiles Alive!",
+        "content": "<p>The Field Museum in Chicago has a new exhibit; Reptiles Alive! Open until April 5, 2026, this exhibit is open to all ages, and features “20 live reptiles, including a baby alligator, spitting cobra, legless lizard, and emerald tree boa”.</p>",
+        "image": null
+      },
+      {
+        "heading": "Reptiles Dead!",
+        "content": "<p>But not only does the Field Museum have “Reptiles Alive!” it also has “Reptiles Dead!” as the Field Museum features almost 11 million embalmed specimens, many of these being unique and endangered reptiles.</p>",
+        "image": null
+      },
+      {
+        "heading": "The Value of Pickled Creatures",
+        "content": "<p>Pickled creatures are a unique way to study reptiles. Entirely new species have been discovered from reptiles sitting in jars post-mortem. From being able to get up close and count the exact number of scales, or how each bone placement is affected by a certain movement, scientists can discover distinct variations between species. Especially when specific mutations are considered outliers, being able to draw on dozens of other similar specimens allow scientists to make these new distinctions.</p>",
+        "image": null
+      },
+      {
+        "heading": "The Preservation Process",
+        "content": "<p>Reptiles are picked in three simple steps. First, they are tagged, so that researchers both in the present and future can identify the species, where it originated, and where to find it in the vast collection of preserved animals. Then, they are injected with carcinogens, which make the animal tissue stiff and rubbery. Lastly, they are submerged in ethanol to complete the preservation process.</p>",
+        "image": null
+      },
+      {
+        "heading": "Komodo Dragons in the Collection",
+        "content": "<p>The Field Museum has two komodo dragons preserved this way, submerged in large alcohol tubs, as both around six feet long.</p>",
+        "image": {
+          "source": "photos/field_komodo.png",
+          "caption": "A preserved reptile specimen in the Field Museum collection."
         }
-      ],
-      "slug": "nature-in-winter",
-      "summary": "8728 Buffalo Avenue, Niagara Falls, NY 14304, United States",
-      "tags": [
-        "Niagara Falls",
-        "winter",
-        "reptiles",
-        "hibernate"
-      ],
-      "thumbnail": "photos/gatorsnow.jpg",
-      "title": "Nature in Winter"
-    },
-    {
-      "post_id": 2,
-      "title": "The Winter Show at The Wurlitzer",
-      "slug": "winter-wurlitzer",
-      "author": "Jacob Shi",
-      "date": "Saturday, January 18, 2025 · 10am – 5pm EST",
-      "thumbnail": "photos/wurlitzer.jpg",
-      "tags": [
-        "Western New York",
-        "reptiles",
-        "Wurlitzer",
-        "sea turtles"
-      ],
-      "summary": "908 Niagara Falls Boulevard, North Tonawanda, NY 14120, United States",
-      "sections": [
-        {
-          "heading": "Introduction",
-          "content": "<p>Get ready for a slithery and scaly extravaganza at the The Winter Show at The Wurlitzer brought to you by WNY Reptiles!</p>",
-          "image": {
-            "source": "photos/wurlitzer.jpg",
-            "caption": "WNY reptiles presents Winter at the Wurlitzer"
-          }
-        },
-        {
-          "heading": "What is this talk about?",
-          "content": "<p>Join us for a day filled with fascinating reptiles, educational exhibits, and interactive experiences. Whether you’re a seasoned reptile enthusiast, oddities collector, plant aficionado, or just curious about these amazing creatures, this event is perfect for all ages.</p>",
-          "image": null
-        },
-        {
-          "heading": "What will I learn?",
-          "content": "Come meet a variety of reptiles up close, learn about their habitats, and even have the chance to handle some of them! Check out our carnivorous plant displays, maybe even take one home! Do you like the unusual? Visit our oddities vendors for preserved specimens, taxidermy, mounts and more! Don’t miss out on this unique opportunity to appreciate the beauty and diversity of reptiles while exploring the historic Wurlitzer building.</p>",
-          "image": null
-        },
-        {
-          "heading": "Mark your calendars",
-          "content": "Mark your calendars and join us for a day of fun and learning at the The Winter Show at The Wurlitzer!</p>",
-          "image": null
+      }
+    ]
+  },
+  {
+    "post_id": 2,
+    "title": "ReptileMap 2025: Empowering Youth with Technology",
+    "slug": "reptilemap-summit-youth-citizen-science-2025",
+    "author": "ReptileMap Summit Committee",
+    "date": "Sunday, October 26, 2025 · 1:30–4:00 p.m. ET",
+    "thumbnail": "photos/summit2025.png",
+    "tags": [
+      "citizen science",
+      "youth engagement",
+      "technology",
+      "reptiles",
+      "conservation",
+      "zoology",
+      "arizona state university",
+      "zoom"
+    ],
+    "summary": "The Annual ReptileMap Summit, held virtually this year, focuses on 'Empowering Youth with Technology to Advocate for Citizen Science.' The event brings together experts and students to discuss how digital tools, mapping, and AI are being used to drive environmental impact, featuring speakers like the founder of SightTrack Map and ASU's Dr. Anthony Barley.",
+    "sections": [
+      {
+        "heading": "Invitation to the Annual ReptileMap Summit",
+        "content": "<p>We’re excited to invite you to the Annual ReptileMap Summit, happening this Sunday, October 26th, from 1:30–4:00 p.m. ET / 10:30 a.m.–1:00 p.m. PT on Zoom.</p><p>This year’s theme is: **Empowering Youth with Technology to Advocate for Citizen Science**</p><p>This virtual event will bring together educators, researchers, tech innovators, and passionate students to explore how emerging tools, from digital mapping to AI, are enabling youth to drive meaningful environmental impact.</p>",
+        "image": {
+          "source": "photos/summit2025.png",
+          "caption": "ReptileMap Summit: Empowering Youth with Technology"
         }
-      ]
-    },
-    {
-      "author": "Darwin Li",
-      "date": "Friday, Nov 12, 2021",
-      "post_id": 2,
-      "sections": [
-        {
-          "heading": "Introduction",
-          "content": "<p>Not a PA Day for your school? No problem! An event recording will be emailed to all registrants. The recording will be accessible until 5 PM on Friday, November 26.</p>",
-          "image": {
-            "source": "photos/littleray.png",
-            "caption": "Little Ray's nature centre"
-          }
-        },
-        {
-          "heading": "What is this talk about?",
-          "content": "<p>Bring world-class nature education into your living room with a Zoo-Zoom experience! Join other alumni kids from around the world to learn about an awesome assortment of cool creatures with an Animal Educator from Little Ray’s Nature Centre.</p>",
-          "image": null
-        },
-        {
-          "heading": "What will I learn?",
-          "content": "<p>This hour-long session features a 45-minute presentation showcasing 8-10 rescued reptiles and mammals, followed by a 15-minute interactive Q&A where kids can learn even more about their favourite animals.</p>",
-          "image": null
-        },
-        {
-          "heading": "Please note",
-          "content": "Please note, this Zoom Meeting will be recorded and shared with registrants. You may activate or deactivate your camera at your discretion.\n\n\n",
-          "image": null
+      },
+      {
+        "heading": "Summit Program Highlights",
+        "content": "<ul><li>Opening Remarks</li><li>Guest Speaker 1: Founder of SightTrack Map – on community mapping and youth engagement</li><li>Panel Discussion: Youth voices and tech-driven advocacy in conservation</li><li>Guest Speaker 2: Dr. Anthony Barley</li><li>Workshop: \"Vibe Coding with AI to Promote Citizen Science\" led by Mark Hoel</li></ul>",
+        "image": null
+      },
+      {
+        "heading": "About Guest Speaker Dr. Anthony Barley",
+        "content": "<p>Dr. Anthony Barley is an Assistant Professor in the School of Mathematical and Natural Sciences at Arizona State University. Dr. Barley grew up in California and received his Bachelor of Science degree in Biological Science from California State University, Sacramento. He received a Ph.D. in Ecology and Evolutionary Biology from the University of Kansas in 2014. After graduating, he went on to do postdoctoral research at the University of Hawaii where he was awarded a postdoctoral fellowship from the Arnold and Mabel Beckman Foundation. He also worked as an Assistant Project Scientist at the University of California, Davis, before joining the faculty at ASU in 2022. Dr. Barley studies the evolution and conservation of reptiles and amphibians in the Southwestern U.S, Southeast Asia, and Mexico.</p>",
+        "image": {
+          "source": "photos/summit2025_barley.png",
+          "caption": "Dr. Anthony Barley, Assistant Professor at ASU"
         }
-      ],
-      "slug": "little-rays",
-      "summary": "Zoom meeting",
-      "tags": [
-        "Little Ray's",
-        "reptiles",
-        "zoom",
-        "animal educator"
-      ],
-      "thumbnail": "photos/littleray.png",
-      "title": "Little Ray’s Animal Adventure\n\n\n"
-    }
-  ]
+      },
+      {
+        "heading": "Event Details",
+        "content": "<p>**Date:** Sunday, October 26</p><p>**Time:** 1:30–4:00 p.m. ET / 10:30 a.m.–1:00 p.m. PT</p><p>**Location:** Zoom (link to be shared upon RSVP)</p><p>Please mark your calendar—we’d love to have you join us. Feel free to forward this invitation to others in your community who may be interested.</p>",
+        "image": null
+      }
+    ]
+  },
+  {
+    "author": "Razi Taraji",
+    "date": "Tuesday, November 26, 2024 · 6:30 – 7:30pm EST",
+    "post_id": 3,
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "<p>Come to The Niagara Falls Public Library LaSalle Branch and learn about how animals in Western NY adapt and respond to the changing environment and cooler temperatures.</p>",
+        "image": {
+          "source": "photos/gatorsnow.jpg",
+          "caption": "Alligators adapt to frozen zoo enclosure"
+        }
+      },
+      {
+        "heading": "What is this talk about?",
+        "content": "<p>Which animals hibernate? What happens to reptiles, amphibians, and insects? How do birds find food?</p>",
+        "image": null
+      },
+      {
+        "heading": "Who is speaking?",
+        "content": "This talk will be given by a naturalist from Niagara Falls State Park and is sponsored by The Niagara Falls Public Library. Free parking in the back of the library.</p>",
+        "image": null
+      }
+    ],
+    "slug": "nature-in-winter",
+    "summary": "8728 Buffalo Avenue, Niagara Falls, NY 14304, United States",
+    "tags": [
+      "Niagara Falls",
+      "winter",
+      "reptiles",
+      "hibernate"
+    ],
+    "thumbnail": "photos/gatorsnow.jpg",
+    "title": "Nature in Winter"
+  },
+  {
+    "post_id": 4,
+    "title": "The Winter Show at The Wurlitzer",
+    "slug": "winter-wurlitzer",
+    "author": "Jacob Shi",
+    "date": "Saturday, January 18, 2025 · 10am – 5pm EST",
+    "thumbnail": "photos/wurlitzer.jpg",
+    "tags": [
+      "Western New York",
+      "reptiles",
+      "Wurlitzer",
+      "sea turtles"
+    ],
+    "summary": "908 Niagara Falls Boulevard, North Tonawanda, NY 14120, United States",
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "<p>Get ready for a slithery and scaly extravaganza at the The Winter Show at The Wurlitzer brought to you by WNY Reptiles!</p>",
+        "image": {
+          "source": "photos/wurlitzer.jpg",
+          "caption": "WNY reptiles presents Winter at the Wurlitzer"
+        }
+      },
+      {
+        "heading": "What is this talk about?",
+        "content": "<p>Join us for a day filled with fascinating reptiles, educational exhibits, and interactive experiences. Whether you’re a seasoned reptile enthusiast, oddities collector, plant aficionado, or just curious about these amazing creatures, this event is perfect for all ages.</p>",
+        "image": null
+      },
+      {
+        "heading": "What will I learn?",
+        "content": "Come meet a variety of reptiles up close, learn about their habitats, and even have the chance to handle some of them! Check out our carnivorous plant displays, maybe even take one home! Do you like the unusual? Visit our oddities vendors for preserved specimens, taxidermy, mounts and more! Don’t miss out on this unique opportunity to appreciate the beauty and diversity of reptiles while exploring the historic Wurlitzer building.</p>",
+        "image": null
+      },
+      {
+        "heading": "Mark your calendars",
+        "content": "Mark your calendars and join us for a day of fun and learning at the The Winter Show at The Wurlitzer!</p>",
+        "image": null
+      }
+    ]
+  },
+  {
+    "author": "Darwin Li",
+    "date": "Friday, Nov 12, 2021",
+    "post_id": 5,
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "<p>Not a PA Day for your school? No problem! An event recording will be emailed to all registrants. The recording will be accessible until 5 PM on Friday, November 26.</p>",
+        "image": {
+          "source": "photos/littleray.png",
+          "caption": "Little Ray's nature centre"
+        }
+      },
+      {
+        "heading": "What is this talk about?",
+        "content": "<p>Bring world-class nature education into your living room with a Zoo-Zoom experience! Join other alumni kids from around the world to learn about an awesome assortment of cool creatures with an Animal Educator from Little Ray’s Nature Centre.</p>",
+        "image": null
+      },
+      {
+        "heading": "What will I learn?",
+        "content": "<p>This hour-long session features a 45-minute presentation showcasing 8-10 rescued reptiles and mammals, followed by a 15-minute interactive Q&A where kids can learn even more about their favourite animals.</p>",
+        "image": null
+      },
+      {
+        "heading": "Please note",
+        "content": "Please note, this Zoom Meeting will be recorded and shared with registrants. You may activate or deactivate your camera at your discretion.\n\n\n",
+        "image": null
+      }
+    ],
+    "slug": "little-rays",
+    "summary": "Zoom meeting",
+    "tags": [
+      "Little Ray's",
+      "reptiles",
+      "zoom",
+      "animal educator"
+    ],
+    "thumbnail": "photos/littleray.png",
+    "title": "Little Ray’s Animal Adventure\n\n\n"
+  }
+]
