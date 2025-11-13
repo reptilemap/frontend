@@ -2,8 +2,10 @@
   "general_settings": {
     "site_name": "Reptilemap.world",
     "main_title": "Mapping the World's Reptiles",
-    "main_splash": "A global initiative to understand reptile biogeography, monitor populations, and inform conservation strategies.",
+    "main_splash": "Unlock the power of citizen science and collaboration.",
     "logo_path": "logo.png",
+    "candysplash": "The Reptilemap is dedicated to establishing a global network of citizen scientists who collaborate to gather data on reptile species, their populations and their environments, creating comprehensive, interactive and accessible global mapping platform that documents the distribution and diversity of reptile species around the world.",
+    "candyimg": "photos/snake.png",
     "prj_splash": "We are involved in various projects aimed at reptile research, habitat restoration, and community engagement. From tracking endangered species to educating local communities, our work spans the globe."
   },
   "conference": [
@@ -45,11 +47,11 @@
   ],
   "about_us": [
     {
-      "section_title": null,
+      "section_title": "Our vision",
       "content": "The Reptile Map is dedicated to creating a comprehensive, interactive, and accessible global mapping platform that documents the distribution and diversity of reptile species around the world. We aim to establish a global network of citizen scientists and researchers to gather crucial data."
     },
     {
-      "section_title": null,
+      "section_title": "Our mission",
       "content": "Our mission is to be a valuable resource for understanding reptile biogeography, monitoring population trends, identifying conservation hotspots, and informing strategies for the protection and management of reptiles and their habitats."
     }
   ],

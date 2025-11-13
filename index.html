@@ -12,7 +12,12 @@
     <style>
         #map { height: 450px; }
         body { background-color: #f8f8f8; }
-        .hero-bg { background: linear-gradient(to right, #4CAF50, #8BC34A); }
+        .hero-bg { 
+            background: linear-gradient(to right, #4CAF50, #8BC34A); 
+        }
+        #eyecandy {
+            margin-left: 20px;
+        }
     </style>
 
 </head>
@@ -47,18 +52,59 @@
     <main>
         <section class="hero-bg white-text section no-pad-bot">
             <div class="container center-align">
-                <br><br>
-                <h1 id='main_title' class="header light-green-text text-lighten-5">A</h1>
+                <h1 id='main_title' class="header light-green-text text-lighten-5"></h1>
                 <div class="row center">
                     <h5 id='main_splash' class="header col s12 light"></h5>
                 </div>
                 <div class="row center">
                     <a href="#map-section" class="btn-large waves-effect waves-light white light-green-text text-darken-4">View Map</a>
                 </div>
-                <br><br>
+                <br>
             </div>
         </section>
 
+        <section id='eyecandy' class="section scrollspy center-align">
+            <div class="row">
+                <h2 class="light-green-text text-darken-4">Empowering conservation one scale at a time</h2>
+                <div class="col s12 m4"><p id='candysplash' class='flow-text'></p></div>
+                <div class="col s12 m8"><img class='75%' id='candyimg'></div>
+            </div>
+        </section>
+
+        <section id="events" class="section scrollspy grey lighten-3">
+            <div class="container center-align">
+                <h2 class="light-green-text text-darken-4">Events</h2>
+                <p class="flow-text">
+                    Join us for our upcoming workshops, webinars, and field trips designed to educate and engage reptile enthusiasts and conservationists.
+                </p>
+                <div class="row" id="events-container"></div>
+            </div>
+            <!-- events div populated by code -->
+            <div id='epages'></div>
+        </section>
+
+        <div id='about' style='position: relative;'>
+            <img class="col s12" src='photos/bluelizard.jpg' width=100%">     
+            <h2 style='position: absolute; top: 5px; left: 25px; color: white;'>About</h2>
+            <div class="container">
+                <p class="col s12 m5 flow-text" id='about_us'></p>
+            </div>
+        </div>
+
+<!--
+        <section class="section scrollspy">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h2 class="light-green-text text-darken-4">About Us</h2>
+                        <div id='about_us' class='flow-text'></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+<!-- Remove for UI updates from Belinda 
         <section id="conference" class="section scrollspy">
             <div class="container center-align">
                 <h2 id='c_title' class="light-green-text text-darken-4"></h2>
@@ -72,6 +118,8 @@
             </div>
         </section>
 
+-->
+
         <section id="youtube" class="section scrollspy grey lighten-3">
             <div class="container center">
                 <h2 class="light-green-text text-darken-4">Videos</h2>
@@ -79,18 +127,7 @@
             </div>
         </section>
 
-        <section id="about" class="section scrollspy ">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 center">
-                        <h2 class="light-green-text text-darken-4">About Us</h2>
-                        <div id='about_us' class='flow-text'></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="map-section" class="section scrollspy grey lighten-3">
+        <section id="map-section" class="section scrollspy">
             <div class="container">
                 <h2 class="light-green-text text-darken-4 center">Reptilemap</h2>
                 <div class="card z-depth-2">
@@ -168,19 +205,7 @@
             <div id='pages'></div>
         </section>
 
-        <section id="events" class="section scrollspy grey lighten-3">
-            <div class="container center-align">
-                <h2 class="light-green-text text-darken-4">Events</h2>
-                <p class="flow-text">
-                    Join us for our upcoming workshops, webinars, and field trips designed to educate and engage reptile enthusiasts and conservationists.
-                </p>
-                <div class="row" id="events-container"></div>
-            </div>
-            <!-- events div populated by code -->
-            <div id='epages'></div>
-        </section>
-
-        <section id="contact" class="section scrollspy">
+        <section id="contact" class="section scrollspy scrollspy grey lighten-3">
  
             <div class="container center-align">
                 <h2 class="light-green-text text-darken-4">Contact us</h2>
@@ -444,12 +469,19 @@
         function renderInit(data) {
             let main_title = document.getElementById('main_title');
             let main_splash = document.getElementById('main_splash');
+
+            let candy_splash = document.getElementById('candysplash');
+            let candy_img = document.getElementById('candyimg');
+            candy_splash.innerHTML = data.general_settings.candysplash;
+            candy_img.src = data.general_settings.candyimg;
+
+
             let prj_splash = document.getElementById('prj_splash');
             main_title.innerHTML = data.general_settings.main_title;
             main_splash.innerHTML = data.general_settings.main_splash;
             prj_splash.innerHTML = data.general_settings.prj_splash;
 
-
+            /* Remove conference as per Belinda UI 
             let allconf = document.getElementById('confstuff');
             myHtml = '';
             for (i=0;i<data.conference[0].sections.length;i++) {
@@ -465,13 +497,15 @@
                 //allconf.insertAdjacentHTML('beforeend', myHtml);
                 allconf.innerHTML = myHtml;
             }
-
+            
             document.getElementById('c_title').innerHTML = data.conference[0].title;
             document.getElementById('c_date').innerHTML = data.conference[0].date;
             document.getElementById('c_location').innerHTML = data.conference[0].location;
             document.getElementById('c_desc').innerHTML = data.conference[0].description;
             document.getElementById('poster').innerHTML = "<a href='poster25.jpg' target='_blank'>Poster</a>";
             
+            */
+
             // Youtube
             let myiframe = document.getElementById('video');
             for (i=0;i<data.videos.length;i++) {
@@ -501,6 +535,7 @@
             for (i=0;i<data.about_us.length;i++) {
                myHtml = 
                `
+                <h3>${data.about_us[i].section_title}</h3>
                 <p>${data.about_us[i].content}<p>
                ` 
                about_us.insertAdjacentHTML('beforeend', myHtml);
